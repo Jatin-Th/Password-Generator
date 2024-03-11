@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Password Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- wrapper -->
+    <div class="container">
+        <h1>PASSWORD GENERATOR</h1>
+
+        <div class="display-container">
+
+            <input readonly placeholder="Password" class="display" data-passwordDisplay> <!-- custom attribute  -> data-passworDisplay -->
+
+            <button class="copyBtn" data-copy>
+                <span class="msg" data-copyMsg></span>
+                <!-- <i class="fa-solid fa-copy"></i> -->
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M208 0H332.1c12.7 0 24.9 5.1 33.9 14.1l67.9 67.9c9 9 14.1 21.2 14.1 33.9V336c0 26.5-21.5 48-48 48H208c-26.5 0-48-21.5-48-48V48c0-26.5 21.5-48 48-48zM48 128h80v64H64V448H256V416h64v48c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V176c0-26.5 21.5-48 48-48z"/></svg>
+            </button>
+
+        </div>
+
+        <div class="input-container">
+
+            <!-- password section -->
+            <div class="length-container">
+                <p>Password Length</p>
+                <p data-lengthNum>0</p>
+            </div>
+            
+            <!-- slider -->
+            <input type="range" min="1" max="20" class="slider" step="1" data-lengthSlider>
+
+            <!-- checkboxes -->
+            <div class="choices-check">
+                <input type="checkbox" id="uppercase">
+                <label for="uppercase">Include Uppercase Letters</label>
+            </div>
+            <div class="choices-check">
+                <input type="checkbox" id="lowercase">
+                <label for="lowercase">Include Lowercase Letters</label>
+            </div>
+            <div class="choices-check">
+                <input type="checkbox" id="numbers">
+                <label for="numbers">Include Numbers</label>
+            </div>
+            <div class="choices-check">
+                <input type="checkbox" id="special">
+                <label for="special">Include Symbols</label>
+            </div>
+            
+            <!-- strength section -->
+            <div class="strength">
+                <p>Strength</p>
+                <div class="indicator" data-indicator></div>
+            </div>
+
+            <!-- password generator -->
+            <button class="generateBtn">Generate Password</button>
+        </div>
+    </div>
+     
+    <script src="https://kit.fontawesome.com/fcaacaa09d.js" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</body>
+</html>
+
